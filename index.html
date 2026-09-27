@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>navoznov Projects</title>
+<meta name="description" content="Projects I've been working on lately">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --fg: #1c1917;
+    --muted: #78716c;
+    --card: #ffffff;
+    --border: #e7e5e4;
+    --accent: #16a34a;
+    --tag: #f5f5f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0a09;
+      --fg: #fafaf9;
+      --muted: #a8a29e;
+      --card: #1c1917;
+      --border: #292524;
+      --accent: #22c55e;
+      --tag: #292524;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c0a09;
+    --fg: #fafaf9;
+    --muted: #a8a29e;
+    --card: #1c1917;
+    --border: #292524;
+    --accent: #22c55e;
+    --tag: #292524;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  .toolbar { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 24px; }
+  .toolbar button {
+    background: var(--card);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font: inherit;
+    font-size: .85rem;
+    cursor: pointer;
+  }
+  .toolbar button:hover { border-color: var(--muted); }
+  .lang span { color: var(--muted); }
+  .lang span.on { color: var(--fg); font-weight: 700; }
+  h1 { margin: 0 0 4px; font-size: 2rem; }
+  .lead { margin: 0 0 32px; color: var(--muted); }
+  .lead a { color: inherit; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  h2 { margin: 0; font-size: 1.15rem; }
+  .meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+  .tag { background: var(--tag); border-radius: 999px; padding: 1px 10px; }
+  p { margin: 0; flex: 1; }
+  .links { display: flex; gap: 16px; font-size: .9rem; }
+  .links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+  <div class="toolbar">
+    <button id="lang" class="lang" aria-label="Switch language"><span data-l="en">EN</span> / <span data-l="ru">RU</span></button>
+    <button id="theme" aria-label="Toggle theme"></button>
+  </div>
+
+  <h1 data-i18n="title">My projects</h1>
+  <p class="lead" data-i18n="lead">What I've been building lately. All the code is on <a href="https://github.com/navoznov">GitHub</a>.</p>
+
+  <div class="grid">
+    <article>
+      <h2>Bandy</h2>
+      <div class="meta"><span class="tag">TypeScript</span><span>2026</span></div>
+      <p data-i18n="bandy">A first-person 3D browser game: a maze of rooms, an inventory, item interactions and an EXIT door to find.</p>
+      <div class="links"><a href="https://navoznov.github.io/bandy/" data-i18n="play">Play</a><a href="https://github.com/navoznov/bandy" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>PC Logger</h2>
+      <div class="meta"><span class="tag">C#</span><span class="tag">Windows</span><span>2026</span></div>
+      <p data-i18n="pclogger">A Windows tray app that tracks an "N minutes at the PC — N minutes break" routine and builds a local HTML report. No data leaves the machine.</p>
+      <div class="links"><a href="https://github.com/navoznov/pc-logger/releases" data-i18n="download">Download</a><a href="https://github.com/navoznov/pc-logger" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>Mathy</h2>
+      <div class="meta"><span class="tag">TypeScript</span><span>2026</span></div>
+      <p data-i18n="mathy">A mental arithmetic trainer: generates problems from configurable rules, times each answer and shows which cases give you trouble.</p>
+      <div class="links"><a href="https://navoznov.github.io/mathy/" data-i18n="open">Open</a><a href="https://github.com/navoznov/mathy" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>Cycle Timer</h2>
+      <div class="meta"><span class="tag">HTML</span><span>2026</span></div>
+      <p data-i18n="cycletimer">A repeating browser timer with sound and flash signals and light and dark themes.</p>
+      <div class="links"><a href="https://navoznov.github.io/cycle-timer/" data-i18n="open">Open</a><a href="https://github.com/navoznov/cycle-timer" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>Minecraft Arcade Game</h2>
+      <div class="meta"><span class="tag">JavaScript</span><span>2026</span></div>
+      <p data-i18n="minecraft">A Minecraft-style arcade game: play as Steve, stomp zombies and move between levels through a Mario pipe. Gamepad supported.</p>
+      <div class="links"><a href="https://navoznov.github.io/MinecraftArcadeGame/" data-i18n="play">Play</a><a href="https://github.com/navoznov/MinecraftArcadeGame" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>Pomodoro</h2>
+      <div class="meta"><span class="tag">HTML</span><span>2026</span></div>
+      <p data-i18n="pomodoro">A simple Pomodoro timer in the browser.</p>
+      <div class="links"><a href="https://navoznov.github.io/Pomodoro/" data-i18n="open">Open</a><a href="https://github.com/navoznov/Pomodoro" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>Munchkin Level Counter</h2>
+      <div class="meta"><span class="tag">React</span><span class="tag">TypeScript</span><span>2025</span></div>
+      <p data-i18n="munchkin">A player level counter for the Munchkin card game.</p>
+      <div class="links"><a href="https://navoznov.github.io/munchkin-level-counter/" data-i18n="open">Open</a><a href="https://github.com/navoznov/munchkin-level-counter" data-i18n="code">Code</a></div>
+    </article>
+  </div>
+</main>
+
+<script>
+  const ru = {
+    title: "Мои проекты",
+    lead: 'То, что я делал в последнее время. Весь код — на <a href="https://github.com/navoznov">GitHub</a>.',
+    bandy: "Браузерная 3D-игра от первого лица: лабиринт комнат, инвентарь, взаимодействие предметов, выход через дверь EXIT.",
+    pclogger: "Трей-приложение для Windows: следит за режимом «N минут за ПК — N минут перерыв» и строит локальный HTML-отчёт. Данные никуда не уходят.",
+    mathy: "Тренажёр устного счёта: генерирует примеры по настраиваемым правилам, замеряет время и показывает, какие случаи не даются.",
+    cycletimer: "Циклический таймер в браузере со звуковым и световым сигналом, светлой и тёмной темой.",
+    minecraft: "Аркада в стиле Minecraft: управляй Стивом, топчи зомби и проходи уровни через трубу из Марио. Поддерживает геймпад.",
+    pomodoro: "Простой Pomodoro-таймер в браузере.",
+    munchkin: "Счётчик уровней игроков для настольной игры «Манчкин».",
+    play: "Играть", open: "Открыть", download: "Скачать", code: "Код",
+  };
+  const en = {};
+  document.querySelectorAll("[data-i18n]").forEach(el => en[el.dataset.i18n] = el.innerHTML);
+
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch {} },
+  };
+
+  function setLang(lang) {
+    const dict = lang === "ru" ? ru : en;
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(el => el.innerHTML = dict[el.dataset.i18n]);
+    document.querySelectorAll("#lang span").forEach(s => s.classList.toggle("on", s.dataset.l === lang));
+    store.set("lang", lang);
+  }
+
+  const themeBtn = document.getElementById("theme");
+  function currentTheme() {
+    return document.documentElement.dataset.theme
+      || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    themeBtn.textContent = theme === "dark" ? "☀" : "☾";
+    store.set("theme", theme);
+  }
+
+  document.getElementById("lang").onclick = () => setLang(document.documentElement.lang === "ru" ? "en" : "ru");
+  themeBtn.onclick = () => setTheme(currentTheme() === "dark" ? "light" : "dark");
+
+  setLang(store.get("lang") || "en");
+  setTheme(store.get("theme") || currentTheme());
+</script>
+</body>
+</html>
