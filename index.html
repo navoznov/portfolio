@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проекты navoznov</title>
+<meta name="description" content="Проекты, которые я делал в последнее время">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --fg: #1c1917;
+    --muted: #78716c;
+    --card: #ffffff;
+    --border: #e7e5e4;
+    --accent: #16a34a;
+    --tag: #f5f5f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0a09;
+      --fg: #fafaf9;
+      --muted: #a8a29e;
+      --card: #1c1917;
+      --border: #292524;
+      --accent: #22c55e;
+      --tag: #292524;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c0a09;
+    --fg: #fafaf9;
+    --muted: #a8a29e;
+    --card: #1c1917;
+    --border: #292524;
+    --accent: #22c55e;
+    --tag: #292524;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { margin: 0 0 4px; font-size: 2rem; }
+  .lead { margin: 0 0 32px; color: var(--muted); }
+  .lead a { color: inherit; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  h2 { margin: 0; font-size: 1.15rem; }
+  .meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+  .tag { background: var(--tag); border-radius: 999px; padding: 1px 10px; }
+  p { margin: 0; flex: 1; }
+  .links { display: flex; gap: 16px; font-size: .9rem; }
+  .links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Мои проекты</h1>
+  <p class="lead">То, что я делал в последнее время. Весь код — на <a href="https://github.com/navoznov">GitHub</a>.</p>
+
+  <div class="grid">
+    <article>
+      <h2>Bandy</h2>
+      <div class="meta"><span class="tag">TypeScript</span><span>2026</span></div>
+      <p>Браузерная 3D-игра от первого лица: лабиринт комнат, инвентарь, взаимодействие предметов, выход через дверь EXIT.</p>
+      <div class="links"><a href="https://navoznov.github.io/bandy/">Играть</a><a href="https://github.com/navoznov/bandy">Код</a></div>
+    </article>
+
+    <article>
+      <h2>PC Logger</h2>
+      <div class="meta"><span class="tag">C#</span><span class="tag">Windows</span><span>2026</span></div>
+      <p>Трей-приложение для Windows: следит за режимом «N минут за ПК — N минут перерыв» и строит локальный HTML-отчёт. Данные никуда не уходят.</p>
+      <div class="links"><a href="https://github.com/navoznov/pc-logger/releases">Скачать</a><a href="https://github.com/navoznov/pc-logger">Код</a></div>
+    </article>
+
+    <article>
+      <h2>Mathy</h2>
+      <div class="meta"><span class="tag">TypeScript</span><span>2026</span></div>
+      <p>Тренажёр устного счёта: генерирует примеры по настраиваемым правилам, замеряет время и показывает, какие случаи не даются.</p>
+      <div class="links"><a href="https://navoznov.github.io/mathy/">Открыть</a><a href="https://github.com/navoznov/mathy">Код</a></div>
+    </article>
+
+    <article>
+      <h2>Cycle Timer</h2>
+      <div class="meta"><span class="tag">HTML</span><span>2026</span></div>
+      <p>Циклический таймер в браузере со звуковым и световым сигналом, светлой и тёмной темой.</p>
+      <div class="links"><a href="https://navoznov.github.io/cycle-timer/">Открыть</a><a href="https://github.com/navoznov/cycle-timer">Код</a></div>
+    </article>
+
+    <article>
+      <h2>Minecraft Arcade Game</h2>
+      <div class="meta"><span class="tag">JavaScript</span><span>2026</span></div>
+      <p>Аркада в стиле Minecraft: управляй Стивом, топчи зомби и проходи уровни через трубу из Марио. Поддерживает геймпад.</p>
+      <div class="links"><a href="https://navoznov.github.io/MinecraftArcadeGame/">Играть</a><a href="https://github.com/navoznov/MinecraftArcadeGame">Код</a></div>
+    </article>
+
+    <article>
+      <h2>Pomodoro</h2>
+      <div class="meta"><span class="tag">HTML</span><span>2026</span></div>
+      <p>Простой Pomodoro-таймер в браузере.</p>
+      <div class="links"><a href="https://navoznov.github.io/Pomodoro/">Открыть</a><a href="https://github.com/navoznov/Pomodoro">Код</a></div>
+    </article>
+
+    <article>
+      <h2>Munchkin Level Counter</h2>
+      <div class="meta"><span class="tag">React</span><span class="tag">TypeScript</span><span>2025</span></div>
+      <p>Счётчик уровней игроков для настольной игры «Манчкин».</p>
+      <div class="links"><a href="https://navoznov.github.io/munchkin-level-counter/">Открыть</a><a href="https://github.com/navoznov/munchkin-level-counter">Код</a></div>
+    </article>
+  </div>
+</main>
+</body>
+</html>
