@@ -83,6 +83,18 @@
   .links { display: flex; gap: 16px; font-size: .9rem; }
   .links a { color: var(--accent); text-decoration: none; font-weight: 600; }
   .links a:hover { text-decoration: underline; }
+  .bots { grid-column: 1 / -1; }
+  .bots ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px 16px;
+  }
+  .bots li a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .bots li a:hover { text-decoration: underline; }
+  .bots li span { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -96,6 +108,20 @@
   <p class="lead" data-i18n="lead">What I've been building lately. All the code is on <a href="https://github.com/navoznov">GitHub</a>.</p>
 
   <div class="grid">
+    <article>
+      <h2>Terminal Commander</h2>
+      <div class="meta"><span class="tag">Go</span><span class="tag">macOS</span><span>2026</span></div>
+      <p data-i18n="tc">A two-panel file manager for the macOS terminal in the style of Norton Commander: file operations, a viewer, a command line and mouse support.</p>
+      <div class="links"><a href="https://github.com/navoznov/terminal-commander/releases" data-i18n="download">Download</a><a href="https://github.com/navoznov/terminal-commander" data-i18n="code">Code</a></div>
+    </article>
+
+    <article>
+      <h2>English Tutor</h2>
+      <div class="meta"><span class="tag">Claude Code</span><span>2026</span></div>
+      <p data-i18n="englishtutor">An English grammar tutor for Russian speakers (B1–B2) built on Claude Code: lessons from a 44-topic plan, exercises and tests in chat, and review sessions based on your own mistakes.</p>
+      <div class="links"><a href="https://github.com/navoznov/english-tutor" data-i18n="code">Code</a></div>
+    </article>
+
     <article>
       <h2>Bandy</h2>
       <div class="meta"><span class="tag">TypeScript</span><span>2026</span></div>
@@ -144,6 +170,22 @@
       <p data-i18n="munchkin">A player level counter for the Munchkin card game.</p>
       <div class="links"><a href="https://navoznov.github.io/munchkin-level-counter/" data-i18n="open">Open</a><a href="https://github.com/navoznov/munchkin-level-counter" data-i18n="code">Code</a></div>
     </article>
+
+    <article class="bots">
+      <h2 data-i18n="bots">Telegram bots</h2>
+      <div class="meta"><span class="tag">Python</span><span class="tag">C#</span><span>2016–2022</span></div>
+      <p data-i18n="botslead">Small bots I made for myself and for friends.</p>
+      <ul>
+        <li><a href="https://github.com/navoznov/ExpensesTelegramBot">Expenses Bot</a> <span data-i18n="botexpenses">— logs expenses from short text messages.</span></li>
+        <li><a href="https://github.com/navoznov/SmartGarden">Smart Garden</a> <span data-i18n="botgarden">— controls a greenhouse: temperature, watering and windows.</span></li>
+        <li><a href="https://github.com/navoznov/PlannedElectricityBlackoutTelegramBot">Blackout Bot</a> <span data-i18n="botblackout">— checks planned power outages in Russian towns.</span></li>
+        <li><a href="https://github.com/navoznov/SurveyTelegramBot">Survey Bot</a> <span data-i18n="botsurvey">— runs surveys and saves the answers to Google Sheets.</span></li>
+        <li><a href="https://github.com/navoznov/ProgrammersSettlementBot">Programmers' Settlement Bot</a> <span data-i18n="botsettlement">— shows the temperature in Programmers' Settlement.</span></li>
+        <li><a href="https://github.com/navoznov/CardsMasterTelegramBot">Cards Master Bot</a> <span data-i18n="botcards">— a database of quote cards sorted by topic, for a classroom game.</span></li>
+        <li><a href="https://github.com/navoznov/PhotoFilterTelegramBot">Photo Filter Bot</a> <span data-i18n="botphoto">— turns photos black and white.</span></li>
+        <li><a href="https://github.com/navoznov/GuidTelegramBot">GUID Bot</a> <span data-i18n="botguid">— replies to any message with a new GUID.</span></li>
+      </ul>
+    </article>
   </div>
 </main>
 
@@ -157,7 +199,19 @@
     cycletimer: "Циклический таймер в браузере со звуковым и световым сигналом, светлой и тёмной темой.",
     minecraft: "Аркада в стиле Minecraft: управляй Стивом, топчи зомби и проходи уровни через трубу из Марио. Поддерживает геймпад.",
     pomodoro: "Простой Pomodoro-таймер в браузере.",
+    tc: "Двухпанельный файловый менеджер для терминала macOS в стиле Norton Commander: файловые операции, просмотрщик, командная строка и мышь.",
+    englishtutor: "Тьютор по английской грамматике для русскоязычных (B1–B2) на Claude Code: уроки по плану из 44 тем, упражнения и тесты в чате, повторение по журналу собственных ошибок.",
     munchkin: "Счётчик уровней игроков для настольной игры «Манчкин».",
+    bots: "Telegram-боты",
+    botslead: "Небольшие боты, которые я делал для себя и знакомых.",
+    botexpenses: "— учёт расходов из коротких текстовых сообщений.",
+    botgarden: "— управление теплицей: температура, полив, окна.",
+    botblackout: "— проверка плановых отключений электричества в населённых пунктах РФ.",
+    botsurvey: "— проводит опросы и сохраняет ответы в Google Sheets.",
+    botsettlement: "— показывает температуру в Посёлке Программистов.",
+    botcards: "— база карточек с высказываниями по темам для учебной игры.",
+    botphoto: "— делает фото чёрно-белыми.",
+    botguid: "— отвечает на любое сообщение новым GUID.",
     play: "Играть", open: "Открыть", download: "Скачать", code: "Код",
   };
   const en = {};
